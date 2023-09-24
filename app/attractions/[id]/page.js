@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { getData } from './data'
 export default async function page({params}) {
     const id = params.id
@@ -10,7 +11,7 @@ export default async function page({params}) {
       <div>
         <h1>{data[0].name}</h1>
         <br />
-        <img src={data[0].coverimage} alt={data.name}/>
+        <Image src={data[0].coverimage} alt={data.name}/>
         <br />
         <p>{data[0].detail}</p>
       </div>
