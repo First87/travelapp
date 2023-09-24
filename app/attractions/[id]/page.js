@@ -8,10 +8,20 @@ export default async function page({params}) {
   return (
     <div>
       {data.length > 0 &&
-      <div>
+      <div
+      style={{width:"50%"}}
+      >
         <h1>{data[0].name}</h1>
         <br />
-        <Image src={data[0].coverimage} alt={data.name}/>
+        <div 
+        >
+        <Image src={data[0].coverimage}
+        width={0}
+        height={0}
+         alt={data.name}
+         layout="responsive"/>
+        </div>
+        
         <br />
         <p>{data[0].detail}</p>
       </div>
